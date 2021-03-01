@@ -403,7 +403,7 @@ angular.module('quassel', ['ngQuassel', 'ngAria', 'ngSanitize', 'ui.bootstrap', 
     video:       { embed: true },
     code:        { embed: true },
     youtube:     { embed: true, theme: 'dark' },
-    twitter:     { embed: true },
+    twitter:     { embed: false },
     twitch:      { embed: true },
     dailymotion: { embed: true },
     ted:         { embed: true },
@@ -424,7 +424,8 @@ angular.module('quassel', ['ngQuassel', 'ngAria', 'ngSanitize', 'ui.bootstrap', 
       if (d.getElementById(id)) return t;
       js = d.createElement(s);
       js.id = id;
-      js.src = "https://platform.twitter.com/widgets.js";
+      //js.src = "https://platform.twitter.com/widgets.js";
+      js.src = "";
       fjs.parentNode.insertBefore(js, fjs);
     
       t._e = [];
